@@ -1,0 +1,15 @@
+@media (max-width: 576px) {
+  label {
+    font-size: 1rem;
+  }
+  .delete-button,
+  .todo-checkbox {
+    font-size: 1.1rem;
+    width: 32px;
+    height: 32px;
+    min-width: 32px;
+    min-height: 32px;
+    max-width: 32px;
+    max-height: 32px;
+  }
+}

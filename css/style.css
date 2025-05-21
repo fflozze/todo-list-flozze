@@ -3,6 +3,9 @@
 @import "./root/font.css";
 @import "./task/add-task.css";
 @import "./task/task.css";
+@import "./media-query/media-992px.css";
+@import "./media-query/media-768px.css";
+@import "./media-query/media-576px.css";
 
 /* Réinitialisation des styles par défaut */
 * {
@@ -40,8 +43,13 @@ form {
 /* Style de la liste des tâches */
 ul {
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  flex-direction: row; /* Pour aligner les li horizontalement */
+  flex-wrap: wrap; /* Permet le retour à la ligne */
+  align-items: flex-start;
   justify-content: center;
   gap: 20px;
+  margin-left: 50px; /* Marge de 50px à gauche */
+  margin-right: 50px; /* Marge de 50px à droite */
+  /* Optionnel : pour éviter que le contenu touche les bords */
+  box-sizing: border-box;
 }

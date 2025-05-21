@@ -6,19 +6,41 @@
 li {
   display: flex;
   align-items: center;
-  width: fit-content;
+  width: auto; /* Permet au li de s'adapter à son contenu */
+  max-width: calc(100vw - 120px); /* 50px de chaque côté + 20px de gap */
+  min-width: 250px; /* Largeur minimale pour l'esthétique */
   height: fit-content;
   gap: 20px;
   padding: 10px 20px;
   border-radius: 16px;
   box-shadow: var(--shadow-validate-color) 0px 0px 17px; /* Effet de lueur */
+  word-break: break-word; /* Coupe le texte si trop long */
+  box-sizing: border-box;
+  flex-wrap: wrap; /* Ajouté pour permettre le retour à la ligne du texte */
 }
 
-/* Style du texte de la tâche */
+/* Fixe la taille des boutons */
+.todo-checkbox,
+.delete-button {
+  flex: 0 0 50px; /* largeur fixe */
+  width: 50px;
+  min-width: 50px;
+  max-width: 50px;
+  height: 50px;
+  min-height: 50px;
+  max-height: 50px;
+  font-size: 2rem; /* Augmente la taille de la police */
+}
+
+/* Le label prend tout l'espace restant et gère le retour à la ligne */
 label {
   font-size: 2rem;
   font-family: var(--font-police);
   z-index: 0;
+  flex: 1 1 0;
+  word-break: break-word;
+  min-width: 0; /* Permet au texte de se réduire et de passer à la ligne */
+  overflow-wrap: break-word;
 }
 
 /* Masquage de la checkbox native */
@@ -32,8 +54,8 @@ input[type="checkbox"] {
 .todo-checkbox {
   display: flex;
   z-index: 1;
-  width: 30px;
-  height: 30px;
+  width: 50px;
+  height: 50px;
   border-radius: 16px;
   align-items: center;
   justify-content: center;
@@ -54,14 +76,14 @@ input[type="checkbox"] {
   z-index: 1;
   justify-content: center;
   align-items: center;
-  width: 30px;
-  height: 30px;
+  width: 50px;
+  height: 50px;
   border-radius: 16px;
   background-color: var(--bg-box-supr-color);
   box-shadow: var(--shadow-supr-color) 0px 0px 17px; /* Effet de lueur */
   border: none;
   color: var(--color-text);
-  font-size: 1rem;
+  font-size: 2.5rem; /* Augmente la taille de l'icône poubelle */
   text-shadow: 0 0 15px var(--shadow-supr-color); /* Effet de lueur sur le texte */
 }
 
