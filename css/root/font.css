@@ -1,0 +1,11 @@
+/* Configuration de la police personnalisée Orbitron */
+@font-face {
+    font-family: "Orbitron";
+    src: url(../font/Orbitron-VariableFont_wght.ttf);
+}
+
+/* Définition de la variable de police globale */
+:root {
+    --font-police: "Orbitron"; /* Police principale utilisée dans toute l'application */
+}
+

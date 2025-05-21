@@ -1,0 +1,47 @@
+/* Import des fichiers CSS nécessaires */
+@import "./root/color.css";
+@import "./root/font.css";
+@import "./task/add-task.css";
+@import "./task/task.css";
+
+/* Réinitialisation des styles par défaut */
+* {
+  margin: 0;
+  padding: 0;
+  background-color: var(--bg-color);
+}
+
+/* Style du corps de la page */
+body {
+  display: flex;
+  flex-direction: column;
+  color: var(--color-text);
+  text-shadow: 0 0 15px var(--shadow-color); /* Effet de lueur sur le texte */
+  gap: 50px;
+}
+
+/* Style du titre principal */
+h1 {
+  font-family: var(--font-police);
+  font-size: 4rem;
+  text-align: center;
+  margin: 20px 0;
+}
+
+/* Style du formulaire */
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0 50px;
+}
+
+/* Style de la liste des tâches */
+ul {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}

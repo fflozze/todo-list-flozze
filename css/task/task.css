@@ -1,0 +1,71 @@
+/* Import des variables globales */
+@import "../root/color.css";
+@import "../root/font.css";
+
+/* Style de chaque élément de tâche */
+li {
+  display: flex;
+  align-items: center;
+  width: fit-content;
+  height: fit-content;
+  gap: 20px;
+  padding: 10px 20px;
+  border-radius: 16px;
+  box-shadow: var(--shadow-validate-color) 0px 0px 17px; /* Effet de lueur */
+}
+
+/* Style du texte de la tâche */
+label {
+  font-size: 2rem;
+  font-family: var(--font-police);
+  z-index: 0;
+}
+
+/* Masquage de la checkbox native */
+input[type="checkbox"] {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* Style de la checkbox personnalisée */
+.todo-checkbox {
+  display: flex;
+  z-index: 1;
+  width: 30px;
+  height: 30px;
+  border-radius: 16px;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--bg-box-validate-color);
+  box-shadow: var(--shadow-validate-color) 0px 0px 17px; /* Effet de lueur */
+  cursor: pointer;
+  font-family: var(--font-police);
+}
+
+/* Animation au survol de la checkbox */
+.todo-checkbox:hover {
+  scale: 1.1;
+}
+
+/* Style du bouton de suppression */
+.delete-button {
+  display: flex;
+  z-index: 1;
+  justify-content: center;
+  align-items: center;
+  width: 30px;
+  height: 30px;
+  border-radius: 16px;
+  background-color: var(--bg-box-supr-color);
+  box-shadow: var(--shadow-supr-color) 0px 0px 17px; /* Effet de lueur */
+  border: none;
+  color: var(--color-text);
+  font-size: 1rem;
+  text-shadow: 0 0 15px var(--shadow-supr-color); /* Effet de lueur sur le texte */
+}
+
+/* Animation au survol du bouton de suppression */
+.delete-button:hover {
+  scale: 1.1;
+}

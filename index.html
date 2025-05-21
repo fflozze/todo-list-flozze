@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<!-- Déclaration du type de document HTML5 -->
+<html lang="en">
+  <head>
+    <!-- En-tête du document contenant les métadonnées et ressources -->
+    <meta charset="UTF-8" />
+    <!-- Définition de l'encodage des caractères -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Configuration de la vue mobile pour le responsive design -->
+    <title>todo-list</title>
+    <!-- Titre de l'application affiché dans l'onglet du navigateur -->
+    <link rel="stylesheet" href="./css/style.css" />
+    <!-- Lien vers la feuille de style externe -->
+    <script defer type="module" src="./js/index.js"></script>
+    <!-- Chargement différé du script principal en tant que module ES6 -->
+  </head>
+  <body>
+    <!-- Corps du document contenant l'interface utilisateur -->
+    <h1>Todo list</h1>
+    <!-- Titre principal de l'application -->
+    <form>
+      <!-- Formulaire pour l'ajout de nouvelles tâches -->
+      <div id="add-task">
+        <!-- Conteneur pour les éléments d'ajout de tâche -->
+        <input
+          id="taskInput"
+          type="text"
+          placeholder="Ajoutée une tache"
+          required
+        />
+        <!-- Champ de saisie pour le texte de la tâche -->
+        <button id="add" type="submit">+</button>
+        <!-- Bouton d'ajout de tâche -->
+      </div>
+    </form>
+
+    <ul id="taskList"></ul>
+    <!-- Liste non ordonnée qui contiendra dynamiquement les tâches -->
+  </body>
+</html>

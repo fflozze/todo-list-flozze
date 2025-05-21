@@ -1,0 +1,19 @@
+/* Variables de couleurs globales pour l'application */
+:root {
+  /* Couleur de fond principale de l'application */
+  --bg-color: rgb(11, 0, 36);
+  
+  /* Couleurs des boîtes pour différents états */
+  --bg-box-supr-color: rgb(100, 0, 0);      /* Couleur de fond pour les éléments de suppression */
+  --bg-box-unValidate-color: rgb(240, 77, 77); /* Couleur de fond pour les tâches non validées */
+  --bg-box-validate-color: rgb(135, 255, 133); /* Couleur de fond pour les tâches validées */
+  
+  /* Couleur du texte principal */
+  --color-text: rgb(241, 255, 254);
+  
+  /* Couleurs des ombres pour différents états */
+  --shadow-color: rgb(255, 255, 255);        /* Ombre par défaut */
+  --shadow-supr-color: rgb(111, 0, 0);       /* Ombre pour les éléments de suppression */
+  --shadow-unValidate-color: rgb(255, 0, 0);  /* Ombre pour les tâches non validées */
+  --shadow-validate-color: rgb(0, 255, 13);   /* Ombre pour les tâches validées */
+}

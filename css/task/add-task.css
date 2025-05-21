@@ -1,0 +1,46 @@
+/* Import des variables globales */
+@import "../root/color.css";
+@import "../root/font.css";
+
+/* Conteneur principal du formulaire d'ajout de tâche */
+#add-task {
+  display: flex;
+}
+
+/* Style du champ de saisie de texte */
+input[type="text"] {
+  width: 300px;
+  padding: 10px;
+  border-radius: 16px;
+  box-shadow: var(--shadow-color) 0px 0px 17px; /* Effet de lueur */
+  border: none;
+  color: var(--color-text);
+  text-shadow: 0 0 15px var(--shadow-color); /* Effet de lueur sur le texte */
+}
+
+/* Suppression de la bordure de focus par défaut */
+input[type="text"]:focus {
+  outline: none;
+}
+
+/* Style du bouton de soumission */
+button[type="submit"] {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 3%;
+  padding-bottom: 7px;
+  width: 50px;
+  height: 50px;
+  box-shadow: var(--shadow-color) 0px 0px 17px; /* Effet de lueur */
+  border-radius: 16px;
+  border: none;
+  color: var(--color-text);
+  font-size: 3rem;
+  text-shadow: 0 0 15px var(--shadow-color); /* Effet de lueur sur le texte */
+}
+
+/* Animation au survol du bouton */
+button[type="submit"]:hover {
+  scale: 1.1; /* Légère augmentation de la taille */
+}
