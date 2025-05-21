@@ -14,6 +14,7 @@ Ce projet est une application de gestion de tâches (Todo List) qui permet aux u
 - Persistance des données avec localStorage. 💾
 - Interface utilisateur moderne et responsive. 🎨
 - Animations et effets visuels pour une meilleure expérience utilisateur. ✨
+- Design adaptatif pour tous les appareils (desktop, tablette, mobile). 📱
 
 ## Structure du Projet 📂
 
@@ -27,6 +28,10 @@ todo-list-flozze/ \
 │ ├── root/ \
 │ │ ├── color.css : Variables et constantes de couleurs. 🎨 \
 │ │ └── font.css : Configuration des polices d'écriture. 🖌️ \
+│ ├── media-query/ \
+│ │ ├── media-992px.css : Styles pour écrans jusqu'à 992px (tablettes). 📱 \
+│ │ ├── media-768px.css : Styles pour écrans jusqu'à 768px (grands mobiles). 📱 \
+│ │ └── media-576px.css : Styles pour écrans jusqu'à 576px (petits mobiles). 📱 \
 │ └── font/ \
 │   └── Orbitron-VariableFont_wght.ttf : Police personnalisée Orbitron. 🖌️ \
 │ \
@@ -70,6 +75,21 @@ Pour exécuter ce projet localement, suivez ces étapes :
 3. Pour supprimer une tâche :
    - Cliquez sur l'icône de corbeille à côté de la tâche
 
+## Responsive Design 📱
+
+L'application s'adapte à différentes tailles d'écran :
+
+- **Desktop** (> 992px) : Interface complète avec tailles de police standard
+- **Tablettes** (≤ 992px) : 
+  - Labels : 1.4rem
+  - Boutons : 40px
+- **Grands mobiles** (≤ 768px) :
+  - Labels : 1.2rem
+  - Boutons : 36px
+- **Petits mobiles** (≤ 576px) :
+  - Labels : 1rem
+  - Boutons : 32px
+
 ## Documentation 📖
 
 La documentation du code est générée avec JSDoc. Pour générer la documentation, suivez ces étapes :
@@ -95,6 +115,8 @@ La documentation du code est générée avec JSDoc. Pour générer la documentat
 - Manipulation du DOM pour une interface dynamique
 - Gestion des événements pour l'interactivité
 - Styles CSS modernes avec variables et animations
+- Media queries pour un design responsive
+- Organisation modulaire des fichiers CSS
 
 ## Auteur 👨‍💻
 
