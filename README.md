@@ -15,6 +15,7 @@ Ce projet est une application de gestion de tâches (Todo List) qui permet aux u
 - Interface utilisateur moderne et responsive. 🎨
 - Animations et effets visuels pour une meilleure expérience utilisateur. ✨
 - Design adaptatif pour tous les appareils (desktop, tablette, mobile). 📱
+- Effets de lueur (text-shadow) sur les éléments interactifs. ✨
 
 ## Structure du Projet 📂
 
@@ -89,8 +90,21 @@ L'application s'adapte à différentes tailles d'écran :
 - **Petits mobiles** (≤ 576px) :
   - Titre : 2rem
   - Labels : 1rem
-  - Champ de saisie : 200px de large
+  - Champ de saisie : 200px de large avec ombre de texte de 3px
   - Boutons : 32px x 32px
+
+## Effets Visuels 🎨
+
+L'application utilise plusieurs effets visuels pour améliorer l'expérience utilisateur :
+
+- **Text-shadow** :
+  - Champ de saisie : 1px de lueur
+  - Bouton de validation : 5px de lueur verte lors de la validation
+  - Bouton de suppression : 4px de lueur
+- **Box-shadow** :
+  - Tâches validées : 10px de lueur verte
+  - Tâches non validées : 10px de lueur rouge
+  - Boutons : 10px de lueur adaptée à leur état
 
 ## Documentation 📖
 

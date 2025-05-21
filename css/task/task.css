@@ -70,6 +70,7 @@ input[type="checkbox"] {
   box-shadow: var(--shadow-validate-color) 0px 0px 10px; /* Effet de lueur à 10px */
   cursor: pointer;
   font-family: var(--font-police);
+  text-shadow: 0 0 5px var(--shadow-validate-color); /* Effet de lueur sur le texte */
 }
 
 /* Animation au survol de la checkbox */

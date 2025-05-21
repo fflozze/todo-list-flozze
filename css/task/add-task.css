@@ -22,7 +22,7 @@ input[type="text"] {
   box-shadow: var(--shadow-color) 0px 0px 10px; /* Effet de lueur à 10px */
   border: none;
   color: var(--color-text);
-  text-shadow: 0 0 4px var(--shadow-color); /* Effet de lueur sur le texte réduit */
+  text-shadow: 0 0 1px var(--shadow-color); /* Effet de lueur sur le texte réduit */
 }
 
 /* Suppression de la bordure de focus par défaut */

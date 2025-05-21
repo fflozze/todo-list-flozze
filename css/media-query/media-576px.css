@@ -14,6 +14,7 @@
   /* Ajustement de la largeur du champ de saisie pour les petits écrans */
   input[type="text"] {
     width: 200px;
+    text-shadow: 3px 3px 3px;
   }
 
   /* Réduction de la taille du texte des labels pour les petits écrans */
