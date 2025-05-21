@@ -34,7 +34,7 @@ todo-list-flozze/ \
 │ │ ├── media-768px.css : Styles pour écrans jusqu'à 768px (grands mobiles). 📱 \
 │ │ └── media-576px.css : Styles pour écrans jusqu'à 576px (petits mobiles). 📱 \
 │ └── font/ \
-│   └── Orbitron-VariableFont_wght.ttf : Police personnalisée Orbitron. 🖌️ \
+│ └── Orbitron-VariableFont_wght.ttf : Police personnalisée Orbitron. 🖌️ \
 │ \
 ├── js/ \
 │ ├── index.js : Point d'entrée principal de l'application. 📜 \
@@ -67,10 +67,12 @@ Pour exécuter ce projet localement, suivez ces étapes :
 ## Utilisation 💻
 
 1. Pour ajouter une nouvelle tâche :
+
    - Saisissez le texte de la tâche dans le champ de saisie
    - Cliquez sur le bouton "+" ou appuyez sur Entrée
 
 2. Pour valider/dévalider une tâche :
+
    - Cliquez sur la case à cocher ou le symbole à côté de la tâche
 
 3. Pour supprimer une tâche :
@@ -81,7 +83,7 @@ Pour exécuter ce projet localement, suivez ces étapes :
 L'application s'adapte à différentes tailles d'écran :
 
 - **Desktop** (> 992px) : Interface complète avec tailles de police standard
-- **Tablettes** (≤ 992px) : 
+- **Tablettes** (≤ 992px) :
   - Labels : 1.4rem
   - Boutons : 40px
 - **Grands mobiles** (≤ 768px) :
@@ -136,4 +138,4 @@ La documentation du code est générée avec JSDoc. Pour générer la documentat
 
 ## Auteur 👨‍💻
 
-**Flozze** 
+**Flozze**
