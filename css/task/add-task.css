@@ -23,6 +23,7 @@ input[type="text"] {
   border: none;
   color: var(--color-text);
   text-shadow: 0 0 1px var(--shadow-color); /* Effet de lueur sur le texte réduit */
+  border: 2px solid var(--shadow-color) ;
 }
 
 /* Suppression de la bordure de focus par défaut */
@@ -45,6 +46,7 @@ button[type="submit"] {
   color: var(--color-text);
   font-size: 3rem;
   text-shadow: 0 0 2px var(--shadow-color); /* Effet de lueur sur le texte très réduit */
+  border: 2px solid var(--shadow-color) ;
 }
 
 /* Animation au survol du bouton */

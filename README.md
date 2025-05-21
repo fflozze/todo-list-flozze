@@ -107,6 +107,11 @@ L'application utilise plusieurs effets visuels pour améliorer l'expérience uti
   - Tâches validées : 10px de lueur verte
   - Tâches non validées : 10px de lueur rouge
   - Boutons : 10px de lueur adaptée à leur état
+- **Border** :
+  - Tâches validées : 2px de bordure verte
+  - Tâches non validées : 2px de bordure rouge
+  - Bouton de validation : 2px de bordure verte/rouge selon l'état
+  - Bouton de suppression : 2px de bordure rouge foncé
 
 ## Documentation 📖
 

@@ -44,8 +44,10 @@ export function handleTaskValidation(e) {
       // Dévalidation de la tâche
       taskItem.classList.remove("validated");
       taskItem.style.boxShadow = "0px 0px 10px rgb(255, 0, 0)";
+      taskItem.style.border = "2px solid rgb(255, 0, 0)";
       checkboxSpan.style.backgroundColor = "rgb(240, 77, 77)";
       checkboxSpan.style.boxShadow = "0px 0px 10px rgb(255, 0, 0)";
+      checkboxSpan.style.border = "2px solid rgb(255, 0, 0)";
       checkboxSpan.style.textShadow = "none";
       checkboxSpan.textContent = " ";
       completed = false;
@@ -53,9 +55,11 @@ export function handleTaskValidation(e) {
       // Validation de la tâche
       taskItem.classList.add("validated");
       taskItem.style.boxShadow = "0px 0px 10px rgb(0, 255, 13)";
+      taskItem.style.border = "2px solid rgb(0, 255, 13)";
       checkboxSpan.textContent = "✓";
       checkboxSpan.style.backgroundColor = "rgb(135, 255, 133)";
       checkboxSpan.style.boxShadow = "0px 0px 10px rgb(0, 255, 13)";
+      checkboxSpan.style.border = "2px solid rgb(0, 255, 13)";
       checkboxSpan.style.textShadow = "0 0 5px rgb(0, 255, 13)";
       completed = true;
     }
