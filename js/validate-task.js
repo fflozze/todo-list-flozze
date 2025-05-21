@@ -32,7 +32,7 @@ export function handleTaskValidation(e) {
       taskItem.style.boxShadow = "0px 0px 17px rgb(255, 0, 0)";
       checkboxSpan.style.backgroundColor = "rgb(240, 77, 77)";
       checkboxSpan.style.boxShadow = "0px 0px 17px rgb(255, 0, 0)";
-      checkboxSpan.textContent = "X";
+      checkboxSpan.textContent = " ";
       completed = false;
     } else {
       // Validation de la tâche

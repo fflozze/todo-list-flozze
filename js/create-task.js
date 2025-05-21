@@ -30,7 +30,7 @@ export function renderTask(task) {
     task.completed ? "checked" : ""
   }/>
     <span class="todo-checkbox" data-task-id="${task.id}">${
-    task.completed ? "✓" : "X"
+    task.completed ? "✓" : " "
   }</span>
     <button class="delete-button" data-task-id="${task.id}">&#128465;</button>
     <label for="task-validate-${task.id}">${task.content}</label>`;
