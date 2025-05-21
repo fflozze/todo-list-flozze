@@ -39,13 +39,13 @@ export function renderTask(task) {
   // Application des styles visuels selon l'état de la tâche
   const checkboxSpan = new_task.querySelector(".todo-checkbox");
   if (task.completed) {
-    new_task.style.boxShadow = "0px 0px 17px rgb(0, 255, 13)";
+    new_task.style.boxShadow = "0px 0px 10px rgb(0, 255, 13)";
     checkboxSpan.style.backgroundColor = "rgb(135, 255, 133)";
-    checkboxSpan.style.boxShadow = "0px 0px 17px rgb(0, 255, 13)";
+    checkboxSpan.style.boxShadow = "0px 0px 10px rgb(0, 255, 13)";
   } else {
-    new_task.style.boxShadow = "0px 0px 17px rgb(255, 0, 0)";
+    new_task.style.boxShadow = "0px 0px 10px rgb(255, 0, 0)";
     checkboxSpan.style.backgroundColor = "rgb(240, 77, 77)";
-    checkboxSpan.style.boxShadow = "0px 0px 17px rgb(255, 0, 0)";
+    checkboxSpan.style.boxShadow = "0px 0px 10px rgb(255, 0, 0)";
   }
 }
 

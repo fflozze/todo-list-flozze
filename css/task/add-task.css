@@ -12,10 +12,10 @@ input[type="text"] {
   width: 300px;
   padding: 10px;
   border-radius: 16px;
-  box-shadow: var(--shadow-color) 0px 0px 17px; /* Effet de lueur */
+  box-shadow: var(--shadow-color) 0px 0px 10px; /* Effet de lueur à 10px */
   border: none;
   color: var(--color-text);
-  text-shadow: 0 0 15px var(--shadow-color); /* Effet de lueur sur le texte */
+  text-shadow: 0 0 4px var(--shadow-color); /* Effet de lueur sur le texte réduit */
 }
 
 /* Suppression de la bordure de focus par défaut */
@@ -32,12 +32,12 @@ button[type="submit"] {
   padding-bottom: 7px;
   width: 50px;
   height: 50px;
-  box-shadow: var(--shadow-color) 0px 0px 17px; /* Effet de lueur */
+  box-shadow: var(--shadow-color) 0px 0px 10px; /* Effet de lueur à 10px */
   border-radius: 16px;
   border: none;
   color: var(--color-text);
   font-size: 3rem;
-  text-shadow: 0 0 15px var(--shadow-color); /* Effet de lueur sur le texte */
+  text-shadow: 0 0 2px var(--shadow-color); /* Effet de lueur sur le texte très réduit */
 }
 
 /* Animation au survol du bouton */

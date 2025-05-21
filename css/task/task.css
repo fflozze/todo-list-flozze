@@ -13,7 +13,7 @@ li {
   gap: 20px;
   padding: 10px 20px;
   border-radius: 16px;
-  box-shadow: var(--shadow-validate-color) 0px 0px 17px; /* Effet de lueur */
+  box-shadow: var(--shadow-validate-color) 0px 0px 10px; /* Effet de lueur à 10px */
   word-break: break-word; /* Coupe le texte si trop long */
   box-sizing: border-box;
   flex-wrap: wrap; /* Ajouté pour permettre le retour à la ligne du texte */
@@ -60,7 +60,7 @@ input[type="checkbox"] {
   align-items: center;
   justify-content: center;
   background-color: var(--bg-box-validate-color);
-  box-shadow: var(--shadow-validate-color) 0px 0px 17px; /* Effet de lueur */
+  box-shadow: var(--shadow-validate-color) 0px 0px 10px; /* Effet de lueur à 10px */
   cursor: pointer;
   font-family: var(--font-police);
 }
@@ -80,11 +80,11 @@ input[type="checkbox"] {
   height: 50px;
   border-radius: 16px;
   background-color: var(--bg-box-supr-color);
-  box-shadow: var(--shadow-supr-color) 0px 0px 17px; /* Effet de lueur */
+  box-shadow: var(--shadow-supr-color) 0px 0px 7px; /* Effet de lueur à 7px */
   border: none;
   color: var(--color-text);
   font-size: 2.5rem; /* Augmente la taille de l'icône poubelle */
-  text-shadow: 0 0 15px var(--shadow-supr-color); /* Effet de lueur sur le texte */
+  text-shadow: 0 0 4px var(--shadow-supr-color); /* Effet de lueur sur le texte réduit */
 }
 
 /* Animation au survol du bouton de suppression */

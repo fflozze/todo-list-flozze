@@ -29,18 +29,18 @@ export function handleTaskValidation(e) {
     if (taskItem.classList.contains("validated")) {
       // Dévalidation de la tâche
       taskItem.classList.remove("validated");
-      taskItem.style.boxShadow = "0px 0px 17px rgb(255, 0, 0)";
+      taskItem.style.boxShadow = "0px 0px 10px rgb(255, 0, 0)";
       checkboxSpan.style.backgroundColor = "rgb(240, 77, 77)";
-      checkboxSpan.style.boxShadow = "0px 0px 17px rgb(255, 0, 0)";
+      checkboxSpan.style.boxShadow = "0px 0px 10px rgb(255, 0, 0)";
       checkboxSpan.textContent = " ";
       completed = false;
     } else {
       // Validation de la tâche
       taskItem.classList.add("validated");
-      taskItem.style.boxShadow = "0px 0px 17px rgb(0, 255, 13)";
+      taskItem.style.boxShadow = "0px 0px 10px rgb(0, 255, 13)";
       checkboxSpan.textContent = "✓";
       checkboxSpan.style.backgroundColor = "rgb(135, 255, 133)";
-      checkboxSpan.style.boxShadow = "0px 0px 17px rgb(0, 255, 13)";
+      checkboxSpan.style.boxShadow = "0px 0px 10px rgb(0, 255, 13)";
       completed = true;
     }
 
