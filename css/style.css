@@ -1,3 +1,10 @@
+/**
+ * @fileoverview Styles principaux de l'application Todo List
+ * @author [flozze]
+ * @version 1.0.0
+ * @description Feuille de style principale qui importe et organise tous les styles de l'application
+ */
+
 /* Import des fichiers CSS nécessaires */
 @import "./root/color.css";
 @import "./root/font.css";

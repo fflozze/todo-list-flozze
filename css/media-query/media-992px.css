@@ -1,7 +1,27 @@
+/**
+ * @fileoverview Media queries pour les grands écrans
+ * @author [flozze]
+ * @version 1.0.0
+ * @description Styles responsifs pour les écrans jusqu'à 992px de large
+ */
+
 @media (max-width: 992px) {
+  /* Réduction de la taille du titre pour les grands écrans */
+  h1 {
+    font-size: 3rem;
+  }
+
+  /* Ajustement de la largeur du champ de saisie pour les grands écrans */
+  input[type="text"] {
+    width: 300px;
+  }
+
+  /* Ajustement de la taille du texte des labels pour les grands écrans */
   label {
     font-size: 1.4rem;
   }
+
+  /* Ajustement de la taille des boutons pour les grands écrans */
   .delete-button,
   .todo-checkbox {
     font-size: 1.6rem;

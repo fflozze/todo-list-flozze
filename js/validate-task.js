@@ -1,6 +1,8 @@
 /**
  * @fileoverview Gestion de la validation et de la modification des tâches
- * @module validate-task
+ * @author [flozze]
+ * @version 1.0.0
+ * @description Module responsable de la validation et de la modification visuelle des tâches
  */
 
 import { updateTask, loadTasks } from "./local-storage.js";
@@ -8,6 +10,9 @@ import { updateTask, loadTasks } from "./local-storage.js";
 /**
  * Initialise l'écouteur d'événements pour la validation des tâches
  * @returns {void}
+ * 
+ * @example
+ * taskValidate();
  */
 export function taskValidate() {
   document.addEventListener("click", handleTaskValidation);
@@ -17,9 +22,18 @@ export function taskValidate() {
  * Gère la validation/dévalidation d'une tâche
  * @param {Event} e - L'événement de clic
  * @returns {void}
+ * 
+ * @description
+ * Cette fonction est appelée lors du clic sur une tâche.
+ * Elle gère l'état visuel et logique de la tâche, ainsi que
+ * sa persistance dans le localStorage.
+ * 
+ * @example
+ * handleTaskValidation(event);
  */
 export function handleTaskValidation(e) {
   if (e.target.classList.contains("todo-checkbox")) {
+    // Récupération des éléments nécessaires
     const taskId = Number(e.target.getAttribute("data-task-id"));
     const taskItem = document.querySelector(`li[data-task-id="${taskId}"]`);
     const checkboxSpan = taskItem.querySelector(".todo-checkbox");
@@ -58,6 +72,14 @@ export function handleTaskValidation(e) {
  * Met à jour l'état d'une tâche dans le localStorage
  * @param {Object} task - La tâche à mettre à jour
  * @returns {void}
+ * @private
+ * 
+ * @example
+ * validateTask({
+ *   id: 1,
+ *   content: "Faire les courses",
+ *   completed: true
+ * });
  */
 function validateTask(task) {
   updateTask(task);

@@ -1,3 +1,10 @@
+/**
+ * @fileoverview Styles des éléments de tâche
+ * @author [flozze]
+ * @version 1.0.0
+ * @description Styles pour l'affichage et l'interaction des tâches individuelles
+ */
+
 /* Import des variables globales */
 @import "../root/color.css";
 @import "../root/font.css";
@@ -84,7 +91,7 @@ input[type="checkbox"] {
   border: none;
   color: var(--color-text);
   font-size: 2.5rem; /* Augmente la taille de l'icône poubelle */
-  text-shadow: 0 0 4px var(--shadow-supr-color); /* Effet de lueur sur le texte réduit */
+  text-shadow: 0 0 4px var(--shadow-color); /* Effet de lueur sur le texte réduit */
 }
 
 /* Animation au survol du bouton de suppression */

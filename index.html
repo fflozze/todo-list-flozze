@@ -1,40 +1,56 @@
 <!DOCTYPE html>
-<!-- Déclaration du type de document HTML5 -->
-<html lang="en">
+<!-- 
+  @fileoverview Structure principale de l'application Todo List
+  @author [Votre Nom]
+  @version 1.0.0
+  @description Application de gestion de tâches avec stockage local et interface utilisateur interactive
+-->
+
+<html lang="fr">
   <head>
-    <!-- En-tête du document contenant les métadonnées et ressources -->
+    <!-- Métadonnées et configuration de base -->
     <meta charset="UTF-8" />
-    <!-- Définition de l'encodage des caractères -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- Configuration de la vue mobile pour le responsive design -->
-    <title>todo-list</title>
-    <!-- Titre de l'application affiché dans l'onglet du navigateur -->
+    <title>Todo list</title>
+
+    <!-- Ressources externes -->
     <link rel="stylesheet" href="./css/style.css" />
-    <!-- Lien vers la feuille de style externe -->
     <script defer type="module" src="./js/index.js"></script>
-    <!-- Chargement différé du script principal en tant que module ES6 -->
   </head>
   <body>
-    <!-- Corps du document contenant l'interface utilisateur -->
+    <!-- En-tête de l'application -->
     <h1>Todo list</h1>
-    <!-- Titre principal de l'application -->
+
+    <!-- Section d'ajout de tâches -->
     <form>
-      <!-- Formulaire pour l'ajout de nouvelles tâches -->
       <div id="add-task">
-        <!-- Conteneur pour les éléments d'ajout de tâche -->
+        <!-- 
+          Champ de saisie pour les nouvelles tâches
+          @type {HTMLInputElement}
+          @required - Empêche la soumission de tâches vides
+        -->
         <input
           id="taskInput"
           type="text"
           placeholder="Ajoutée une tache"
           required
+          alt="Champ de saisie pour ajouter une nouvelle tâche"
         />
-        <!-- Champ de saisie pour le texte de la tâche -->
-        <button id="add" type="submit">+</button>
-        <!-- Bouton d'ajout de tâche -->
+
+        <!-- 
+          Bouton de soumission pour créer une nouvelle tâche
+          @type {HTMLButtonElement}
+          @event submit - Déclenche la création de la tâche
+        -->
+        <button id="add" type="submit" alt="Bouton pour ajouter une nouvelle tâche">+</button>
       </div>
     </form>
 
+    <!-- 
+      Conteneur dynamique pour la liste des tâches
+      @type {HTMLUListElement}
+      @description Les tâches seront injectées ici via JavaScript
+    -->
     <ul id="taskList"></ul>
-    <!-- Liste non ordonnée qui contiendra dynamiquement les tâches -->
   </body>
 </html>

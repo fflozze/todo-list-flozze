@@ -1,3 +1,10 @@
+/**
+ * @fileoverview Styles du formulaire d'ajout de tâche
+ * @author [flozze]
+ * @version 1.0.0
+ * @description Styles pour le formulaire et les éléments d'ajout de nouvelle tâche
+ */
+
 /* Import des variables globales */
 @import "../root/color.css";
 @import "../root/font.css";

@@ -1,7 +1,40 @@
+/**
+ * @fileoverview Media queries pour les écrans de taille moyenne
+ * @author [flozze]
+ * @version 1.0.0
+ * @description Styles responsifs pour les écrans jusqu'à 768px de large
+ */
+
+/* Ajustements pour les écrans jusqu'à 768px */
+@media screen and (max-width: 768px) {
+  /* Réduction de la taille du titre */
+  h1 {
+    font-size: 2.5rem;
+  }
+
+  /* Ajustement de la largeur du champ de saisie */
+  input[type="text"] {
+    width: 250px;
+  }
+}
+
 @media (max-width: 768px) {
+  /* Réduction de la taille du titre pour les écrans moyens */
+  h1 {
+    font-size: 2.5rem;
+  }
+
+  /* Ajustement de la largeur du champ de saisie pour les écrans moyens */
+  input[type="text"] {
+    width: 250px;
+  }
+
+  /* Ajustement de la taille du texte des labels pour les écrans moyens */
   label {
     font-size: 1.2rem;
   }
+
+  /* Ajustement de la taille des boutons pour les écrans moyens */
   .delete-button,
   .todo-checkbox {
     font-size: 1.4rem;

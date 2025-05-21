@@ -1,3 +1,10 @@
+/**
+ * @fileoverview Variables de couleur de l'application
+ * @author [flozze]
+ * @version 1.0.0
+ * @description Définition des variables de couleur utilisées dans toute l'application
+ */
+
 /* Variables de couleurs globales pour l'application */
 :root {
   /* Couleur de fond principale de l'application */

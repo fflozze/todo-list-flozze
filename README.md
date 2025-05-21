@@ -87,8 +87,10 @@ L'application s'adapte à différentes tailles d'écran :
   - Labels : 1.2rem
   - Boutons : 36px
 - **Petits mobiles** (≤ 576px) :
+  - Titre : 2rem
   - Labels : 1rem
-  - Boutons : 32px
+  - Champ de saisie : 200px de large
+  - Boutons : 32px x 32px
 
 ## Documentation 📖
 

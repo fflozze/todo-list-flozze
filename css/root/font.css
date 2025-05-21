@@ -1,3 +1,10 @@
+/**
+ * @fileoverview Variables de police de l'application
+ * @author [flozze]
+ * @version 1.0.0
+ * @description Définition des variables de police utilisées dans toute l'application
+ */
+
 /* Configuration de la police personnalisée Orbitron */
 @font-face {
     font-family: "Orbitron";
