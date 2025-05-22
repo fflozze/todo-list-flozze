@@ -10,10 +10,7 @@
 @import "./root/font.css";
 @import "./task/add-task.css";
 @import "./task/task.css";
-@import "./media-query/media-992px.css";
-@import "./media-query/media-768px.css";
-@import "./media-query/media-576px.css";
-
+@import "./media-query/media-handler.css";
 /* Réinitialisation des styles par défaut */
 * {
   margin: 0;

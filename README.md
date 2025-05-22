@@ -30,6 +30,7 @@ todo-list-flozze/ \
 │ │ ├── color.css : Variables et constantes de couleurs. 🎨 \
 │ │ └── font.css : Configuration des polices d'écriture. 🖌️ \
 │ ├── media-query/ \
+│ │ ├── media-handler.css : Fichier principal qui importe toutes les media queries. 📱 \
 │ │ ├── media-992px.css : Styles pour écrans jusqu'à 992px (tablettes). 📱 \
 │ │ ├── media-768px.css : Styles pour écrans jusqu'à 768px (grands mobiles). 📱 \
 │ │ └── media-576px.css : Styles pour écrans jusqu'à 576px (petits mobiles). 📱 \
