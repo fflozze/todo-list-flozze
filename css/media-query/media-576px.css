@@ -1,36 +1,161 @@
 /**
  * @fileoverview Media queries pour les écrans de petite taille
- * @author [flozze]
- * @version 1.0.0
+ * @author flozze
+ * @version 2.0.0
  * @description Styles responsifs pour les écrans jusqu'à 576px de large
  */
 
 @media (max-width: 576px) {
-  /* Réduction de la taille du titre pour les petits écrans */
+  body {
+    padding: 0.5rem;
+  }
+
+  .container {
+    padding: 0.75rem;
+  }
+
   h1 {
     font-size: 2rem;
+    margin: 8px 0 1rem 0;
+    line-height: 1.2;
   }
 
-  /* Ajustement de la largeur du champ de saisie pour les petits écrans */
+  .flozze-container {
+    height: 120px;
+    margin-bottom: 1rem;
+  }
+
+  .flozze-image {
+    max-width: 110px;
+    max-height: 110px;
+    padding: 6px;
+    border-radius: 15px;
+  }
+
+  #add-task {
+    gap: 10px;
+    width: 100%;
+    padding: 0 5px;
+    flex-direction: column;
+    align-items: stretch;
+  }
+
   input[type="text"] {
-    width: 200px;
-    text-shadow: 3px 3px 3px;
+    max-width: 100%;
+    width: 100%;
+    padding: 10px 14px;
+    font-size: 0.9rem;
+    border-radius: 35px;
   }
 
-  /* Réduction de la taille du texte des labels pour les petits écrans */
+  button[type="submit"] {
+    width: 45px;
+    height: 45px;
+    font-size: 1.8rem;
+    align-self: center;
+  }
+
+  ul {
+    gap: 12px;
+    padding: 0 5px;
+  }
+
+  li {
+    max-width: 100%;
+    min-width: 100%;
+    padding: 12px 15px;
+    gap: 10px;
+    border-radius: 12px;
+  }
+
   label {
+    font-size: 1rem;
+    line-height: 1.4;
+  }
+
+  .delete-button,
+  .todo-checkbox {
+    width: 35px;
+    height: 35px;
+    min-width: 35px;
+    min-height: 35px;
+    max-width: 35px;
+    max-height: 35px;
     font-size: 1rem;
   }
 
-  /* Ajustement de la taille des boutons pour les petits écrans */
+  .delete-button {
+    font-size: 1.2rem;
+  }
+
+  /* Réduction des effets d'ombre pour améliorer les performances */
+  .particle {
+    display: none;
+  }
+
+  .footer {
+    margin-top: 1.5rem;
+    padding: 0.75rem 0.25rem;
+  }
+
+  .footer-text {
+    font-size: 0.75rem;
+    padding: 8px 12px;
+    line-height: 1.4;
+  }
+}
+
+/* Très petits écrans (moins de 400px) */
+@media (max-width: 400px) {
+  h1 {
+    font-size: 1.6rem;
+  }
+
+  .flozze-container {
+    height: 100px;
+  }
+
+  .flozze-image {
+    max-width: 90px;
+    max-height: 90px;
+  }
+
+  input[type="text"] {
+    padding: 8px 12px;
+    font-size: 0.85rem;
+  }
+
+  button[type="submit"] {
+    width: 40px;
+    height: 40px;
+    font-size: 1.6rem;
+  }
+
+  li {
+    padding: 10px 12px;
+  }
+
+  label {
+    font-size: 0.9rem;
+  }
+
   .delete-button,
   .todo-checkbox {
-    font-size: 1.1rem;
     width: 32px;
     height: 32px;
     min-width: 32px;
     min-height: 32px;
     max-width: 32px;
     max-height: 32px;
+    font-size: 0.9rem;
+  }
+
+  .delete-button {
+    font-size: 1rem;
+  }
+
+  .footer-text {
+    font-size: 0.7rem;
+    padding: 6px 10px;
   }
 }

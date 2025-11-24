@@ -1,26 +1,39 @@
 /**
  * @fileoverview Variables de couleur de l'application
- * @author [flozze]
- * @version 1.0.0
+ * @author flozze
+ * @version 2.0.0
  * @description Définition des variables de couleur utilisées dans toute l'application
+ * Harmonisé avec le style du site principal
  */
 
 /* Variables de couleurs globales pour l'application */
 :root {
+  /* Gradient de fond principal (violet/bleu comme le site principal) */
+  --bg-gradient-start: #667eea;
+  --bg-gradient-end: #764ba2;
+  
   /* Couleur de fond principale de l'application */
-  --bg-color: rgb(11, 0, 36);
+  --bg-color: transparent;
+  
+  /* Couleurs glassmorphism */
+  --glass-bg: rgba(255, 255, 255, 0.2);
+  --glass-border: rgba(255, 255, 255, 0.3);
+  --glass-hover: rgba(255, 255, 255, 0.3);
   
   /* Couleurs des boîtes pour différents états */
-  --bg-box-supr-color: rgb(100, 0, 0);      /* Couleur de fond pour les éléments de suppression */
-  --bg-box-unValidate-color: rgb(240, 77, 77); /* Couleur de fond pour les tâches non validées */
-  --bg-box-validate-color: rgb(135, 255, 133); /* Couleur de fond pour les tâches validées */
+  --bg-box-supr-color: rgba(255, 77, 77, 0.3);      /* Couleur de fond pour les éléments de suppression */
+  --bg-box-unValidate-color: rgba(255, 193, 7, 0.3); /* Couleur de fond pour les tâches non validées */
+  --bg-box-validate-color: rgba(76, 175, 80, 0.3);  /* Couleur de fond pour les tâches validées */
   
   /* Couleur du texte principal */
-  --color-text: rgb(241, 255, 254);
+  --color-text: rgba(255, 255, 255, 0.95);
   
   /* Couleurs des ombres pour différents états */
-  --shadow-color: rgb(255, 255, 255);        /* Ombre par défaut */
-  --shadow-supr-color: rgb(111, 0, 0);       /* Ombre pour les éléments de suppression */
-  --shadow-unValidate-color: rgb(255, 0, 0);  /* Ombre pour les tâches non validées */
-  --shadow-validate-color: rgb(0, 255, 13);   /* Ombre pour les tâches validées */
+  --shadow-color: rgba(255, 255, 255, 0.5);        /* Ombre par défaut */
+  --shadow-supr-color: rgba(255, 77, 77, 0.6);     /* Ombre pour les éléments de suppression */
+  --shadow-unValidate-color: rgba(255, 193, 7, 0.6); /* Ombre pour les tâches non validées */
+  --shadow-validate-color: rgba(76, 175, 80, 0.6);  /* Ombre pour les tâches validées */
+  
+  /* Couleurs des particules */
+  --particle-color: rgba(255, 255, 255, 0.3);
 }

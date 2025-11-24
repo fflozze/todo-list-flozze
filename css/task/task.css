@@ -1,8 +1,9 @@
 /**
  * @fileoverview Styles des éléments de tâche
- * @author [flozze]
- * @version 1.0.0
+ * @author flozze
+ * @version 2.0.0
  * @description Styles pour l'affichage et l'interaction des tâches individuelles
+ * Style glassmorphism harmonisé avec le site principal
  */
 
 /* Import des variables globales */
@@ -13,41 +14,94 @@
 li {
   display: flex;
   align-items: center;
-  width: auto; /* Permet au li de s'adapter à son contenu */
-  max-width: calc(100vw - 120px); /* 50px de chaque côté + 20px de gap */
-  min-width: 250px; /* Largeur minimale pour l'esthétique */
+  width: 100%;
+  max-width: 600px;
+  min-width: 280px;
   height: fit-content;
-  gap: 20px;
-  padding: 10px 20px;
-  border-radius: 16px;
-  box-shadow: var(--shadow-validate-color) 0px 0px 10px; /* Effet de lueur à 10px */
-  word-break: break-word; /* Coupe le texte si trop long */
+  gap: 15px;
+  padding: 20px 25px;
+  border-radius: 20px;
+  background: var(--glass-bg);
+  backdrop-filter: blur(10px);
+  border: 2px solid var(--glass-border);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  word-break: break-word;
   box-sizing: border-box;
-  flex-wrap: wrap; /* Ajouté pour permettre le retour à la ligne du texte */
+  flex-wrap: wrap;
+  transition: all 0.3s ease;
+  animation: fadeInUp 0.5s ease-out;
+}
+
+li:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+  background: var(--glass-hover);
+}
+
+/* Tâche non validée */
+li:not(.validated) {
+  background: var(--bg-box-unValidate-color);
+  border-color: rgba(255, 193, 7, 0.5);
+  box-shadow: 0 10px 30px rgba(255, 193, 7, 0.2);
+}
+
+li:not(.validated):hover {
+  box-shadow: 0 15px 40px rgba(255, 193, 7, 0.3);
+}
+
+/* Tâche validée */
+li.validated {
+  background: var(--bg-box-validate-color);
+  border-color: rgba(76, 175, 80, 0.5);
+  box-shadow: 0 10px 30px rgba(76, 175, 80, 0.2);
+  opacity: 0.8;
+}
+
+li.validated:hover {
+  box-shadow: 0 15px 40px rgba(76, 175, 80, 0.3);
+  opacity: 1;
 }
 
 /* Fixe la taille des boutons */
 .todo-checkbox,
 .delete-button {
-  flex: 0 0 50px; /* largeur fixe */
+  flex: 0 0 50px;
   width: 50px;
   min-width: 50px;
   max-width: 50px;
   height: 50px;
   min-height: 50px;
   max-height: 50px;
-  font-size: 2rem; /* Augmente la taille de la police */
+  font-size: 1.5rem;
 }
 
 /* Le label prend tout l'espace restant et gère le retour à la ligne */
 label {
-  font-size: 2rem;
+  font-size: 1.3rem;
   font-family: var(--font-police);
+  font-weight: 600;
   z-index: 0;
   flex: 1 1 0;
   word-break: break-word;
-  min-width: 0; /* Permet au texte de se réduire et de passer à la ligne */
+  min-width: 0;
   overflow-wrap: break-word;
+  color: white;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7), 0 0 8px rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  line-height: 1.5;
+}
+
+label:hover {
+  transform: translateX(5px);
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.8), 0 0 10px rgba(0, 0, 0, 0.6);
+}
+
+/* Tâche validée - texte barré */
+li.validated label {
+  text-decoration: line-through;
+  opacity: 0.75;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6), 0 0 6px rgba(0, 0, 0, 0.4);
 }
 
 /* Masquage de la checkbox native */
@@ -55,6 +109,7 @@ input[type="checkbox"] {
   opacity: 0;
   width: 0;
   height: 0;
+  position: absolute;
 }
 
 /* Style de la checkbox personnalisée */
@@ -63,19 +118,35 @@ input[type="checkbox"] {
   z-index: 1;
   width: 50px;
   height: 50px;
-  border-radius: 16px;
+  border-radius: 50%;
   align-items: center;
   justify-content: center;
-  background-color: var(--bg-box-validate-color);
-  box-shadow: var(--shadow-validate-color) 0px 0px 10px; /* Effet de lueur à 10px */
+  background: var(--bg-box-unValidate-color);
+  backdrop-filter: blur(10px);
+  border: 2px solid rgba(255, 193, 7, 0.5);
+  box-shadow: 0 5px 15px rgba(255, 193, 7, 0.3);
   cursor: pointer;
   font-family: var(--font-police);
-  text-shadow: 0 0 5px var(--shadow-validate-color); /* Effet de lueur sur le texte */
+  color: var(--color-text);
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease;
+}
+
+/* Checkbox validée */
+li.validated .todo-checkbox {
+  background: var(--bg-box-validate-color);
+  border-color: rgba(76, 175, 80, 0.5);
+  box-shadow: 0 5px 15px rgba(76, 175, 80, 0.3);
 }
 
 /* Animation au survol de la checkbox */
 .todo-checkbox:hover {
-  scale: 1.1;
+  transform: scale(1.1) rotate(5deg);
+  box-shadow: 0 8px 20px rgba(255, 193, 7, 0.4);
+}
+
+li.validated .todo-checkbox:hover {
+  box-shadow: 0 8px 20px rgba(76, 175, 80, 0.4);
 }
 
 /* Style du bouton de suppression */
@@ -86,16 +157,25 @@ input[type="checkbox"] {
   align-items: center;
   width: 50px;
   height: 50px;
-  border-radius: 16px;
-  background-color: var(--bg-box-supr-color);
-  box-shadow: var(--shadow-supr-color) 0px 0px 7px; /* Effet de lueur à 7px */
-  border: none;
+  border-radius: 50%;
+  background: var(--bg-box-supr-color);
+  backdrop-filter: blur(10px);
+  border: 2px solid rgba(255, 77, 77, 0.5);
+  box-shadow: 0 5px 15px rgba(255, 77, 77, 0.3);
   color: var(--color-text);
-  font-size: 2.5rem; /* Augmente la taille de l'icône poubelle */
-  text-shadow: 0 0 4px var(--shadow-color); /* Effet de lueur sur le texte réduit */
+  font-size: 1.8rem;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+  transition: all 0.3s ease;
 }
 
 /* Animation au survol du bouton de suppression */
 .delete-button:hover {
-  scale: 1.1;
+  transform: scale(1.15) rotate(15deg);
+  box-shadow: 0 8px 20px rgba(255, 77, 77, 0.4);
+  background: rgba(255, 77, 77, 0.4);
+}
+
+.delete-button:active {
+  transform: scale(0.95) rotate(15deg);
 }

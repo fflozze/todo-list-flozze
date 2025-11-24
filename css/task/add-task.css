@@ -1,8 +1,9 @@
 /**
  * @fileoverview Styles du formulaire d'ajout de tâche
- * @author [flozze]
- * @version 1.0.0
+ * @author flozze
+ * @version 2.0.0
  * @description Styles pour le formulaire et les éléments d'ajout de nouvelle tâche
+ * Style glassmorphism harmonisé avec le site principal
  */
 
 /* Import des variables globales */
@@ -12,23 +13,56 @@
 /* Conteneur principal du formulaire d'ajout de tâche */
 #add-task {
   display: flex;
+  gap: 15px;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 
 /* Style du champ de saisie de texte */
 input[type="text"] {
-  width: 300px;
-  padding: 10px;
-  border-radius: 16px;
-  box-shadow: var(--shadow-color) 0px 0px 10px; /* Effet de lueur à 10px */
-  border: none;
-  color: var(--color-text);
-  text-shadow: 0 0 1px var(--shadow-color); /* Effet de lueur sur le texte réduit */
-  border: 2px solid var(--shadow-color) ;
+  width: 100%;
+  max-width: 400px;
+  padding: 15px 20px;
+  border-radius: 50px;
+  background: rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(10px);
+  border: 2px solid var(--glass-border);
+  color: white;
+  font-size: 1.1rem;
+  font-family: var(--font-police);
+  font-weight: 600;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7), 0 0 8px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+  -webkit-text-fill-color: white;
+}
+
+input[type="text"]::placeholder {
+  color: rgba(255, 255, 255, 0.9);
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  -webkit-text-fill-color: rgba(255, 255, 255, 0.9);
 }
 
 /* Suppression de la bordure de focus par défaut */
 input[type="text"]:focus {
   outline: none;
+  background: rgba(255, 255, 255, 0.4);
+  transform: scale(1.02);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+  color: white;
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.8), 0 0 10px rgba(0, 0, 0, 0.6);
+  -webkit-text-fill-color: white;
+}
+
+/* Pour les navigateurs qui utilisent autofill */
+input[type="text"]:-webkit-autofill,
+input[type="text"]:-webkit-autofill:hover,
+input[type="text"]:-webkit-autofill:focus {
+  -webkit-text-fill-color: white;
+  -webkit-box-shadow: 0 0 0px 1000px rgba(255, 255, 255, 0.3) inset;
+  box-shadow: 0 0 0px 1000px rgba(255, 255, 255, 0.3) inset;
+  transition: background-color 5000s ease-in-out 0s;
 }
 
 /* Style du bouton de soumission */
@@ -36,20 +70,36 @@ button[type="submit"] {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-left: 3%;
-  padding-bottom: 7px;
-  width: 50px;
-  height: 50px;
-  box-shadow: var(--shadow-color) 0px 0px 10px; /* Effet de lueur à 10px */
-  border-radius: 16px;
-  border: none;
-  color: var(--color-text);
-  font-size: 3rem;
-  text-shadow: 0 0 2px var(--shadow-color); /* Effet de lueur sur le texte très réduit */
-  border: 2px solid var(--shadow-color) ;
+  width: 60px;
+  height: 60px;
+  background: var(--glass-bg);
+  backdrop-filter: blur(10px);
+  border: 2px solid var(--glass-border);
+  border-radius: 50%;
+  color: white;
+  font-size: 2.5rem;
+  font-weight: bold;
+  line-height: 1;
+  padding: 0 0 2px 0;
+  margin: 0;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7), 0 0 8px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  flex-shrink: 0;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  text-align: center;
 }
 
 /* Animation au survol du bouton */
 button[type="submit"]:hover {
-  scale: 1.1; /* Légère augmentation de la taille */
+  transform: scale(1.1);
+  background: var(--glass-hover);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+  padding: 0 0 2px 0;
+}
+
+button[type="submit"]:active {
+  transform: scale(0.95);
+  padding: 0 0 2px 0;
 }

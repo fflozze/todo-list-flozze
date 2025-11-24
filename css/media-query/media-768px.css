@@ -1,48 +1,94 @@
 /**
  * @fileoverview Media queries pour les écrans de taille moyenne
- * @author [flozze]
- * @version 1.0.0
+ * @author flozze
+ * @version 2.0.0
  * @description Styles responsifs pour les écrans jusqu'à 768px de large
  */
 
-/* Ajustements pour les écrans jusqu'à 768px */
-@media screen and (max-width: 768px) {
-  /* Réduction de la taille du titre */
-  h1 {
-    font-size: 2.5rem;
-  }
-
-  /* Ajustement de la largeur du champ de saisie */
-  input[type="text"] {
-    width: 250px;
-  }
-}
-
 @media (max-width: 768px) {
-  /* Réduction de la taille du titre pour les écrans moyens */
+  body {
+    padding: 1rem 0.5rem;
+  }
+
+  .container {
+    padding: 1rem;
+  }
+
   h1 {
     font-size: 2.5rem;
+    margin: 10px 0 1.5rem 0;
   }
 
-  /* Ajustement de la largeur du champ de saisie pour les écrans moyens */
+  .flozze-container {
+    height: 140px;
+    margin-bottom: 1.5rem;
+  }
+
+  .flozze-image {
+    max-width: 130px;
+    max-height: 130px;
+    padding: 8px;
+  }
+
+  #add-task {
+    gap: 12px;
+    width: 100%;
+    padding: 0 10px;
+  }
+
   input[type="text"] {
-    width: 250px;
+    max-width: 100%;
+    width: 100%;
+    padding: 12px 16px;
+    font-size: 0.95rem;
+    border-radius: 40px;
   }
 
-  /* Ajustement de la taille du texte des labels pour les écrans moyens */
+  button[type="submit"] {
+    width: 50px;
+    height: 50px;
+    font-size: 2rem;
+  }
+
+  ul {
+    gap: 15px;
+    padding: 0 10px;
+  }
+
+  li {
+    max-width: 100%;
+    min-width: 100%;
+    padding: 15px 18px;
+    gap: 12px;
+    border-radius: 15px;
+  }
+
   label {
+    font-size: 1.1rem;
+  }
+
+  .delete-button,
+  .todo-checkbox {
+    width: 40px;
+    height: 40px;
+    min-width: 40px;
+    min-height: 40px;
+    max-width: 40px;
+    max-height: 40px;
     font-size: 1.2rem;
   }
 
-  /* Ajustement de la taille des boutons pour les écrans moyens */
-  .delete-button,
-  .todo-checkbox {
+  .delete-button {
     font-size: 1.4rem;
-    width: 36px;
-    height: 36px;
-    min-width: 36px;
-    min-height: 36px;
-    max-width: 36px;
-    max-height: 36px;
+  }
+
+  .footer {
+    margin-top: 2rem;
+    padding: 1rem 0.5rem;
+  }
+
+  .footer-text {
+    font-size: 0.85rem;
+    padding: 10px 16px;
   }
 }

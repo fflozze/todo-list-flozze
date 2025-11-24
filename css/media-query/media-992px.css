@@ -1,35 +1,64 @@
 /**
  * @fileoverview Media queries pour les grands écrans
- * @author [flozze]
- * @version 1.0.0
+ * @author flozze
+ * @version 2.0.0
  * @description Styles responsifs pour les écrans jusqu'à 992px de large
  */
 
 @media (max-width: 992px) {
-  /* Réduction de la taille du titre pour les grands écrans */
+  .container {
+    max-width: 100%;
+    padding: 1.5rem;
+  }
+
   h1 {
     font-size: 3rem;
+    margin: 15px 0 1.5rem 0;
   }
 
-  /* Ajustement de la largeur du champ de saisie pour les grands écrans */
+  .flozze-container {
+    height: 160px;
+  }
+
+  .flozze-image {
+    max-width: 150px;
+    max-height: 150px;
+  }
+
   input[type="text"] {
-    width: 300px;
+    max-width: 350px;
+    padding: 12px 18px;
+    font-size: 1rem;
   }
 
-  /* Ajustement de la taille du texte des labels pour les grands écrans */
+  button[type="submit"] {
+    width: 55px;
+    height: 55px;
+    font-size: 2.2rem;
+  }
+
+  li {
+    max-width: 550px;
+    padding: 18px 22px;
+    gap: 12px;
+  }
+
   label {
+    font-size: 1.2rem;
+  }
+
+  .delete-button,
+  .todo-checkbox {
+    width: 45px;
+    height: 45px;
+    min-width: 45px;
+    min-height: 45px;
+    max-width: 45px;
+    max-height: 45px;
     font-size: 1.4rem;
   }
 
-  /* Ajustement de la taille des boutons pour les grands écrans */
-  .delete-button,
-  .todo-checkbox {
+  .delete-button {
     font-size: 1.6rem;
-    width: 40px;
-    height: 40px;
-    min-width: 40px;
-    min-height: 40px;
-    max-width: 40px;
-    max-height: 40px;
   }
 }
