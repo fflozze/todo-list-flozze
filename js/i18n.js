@@ -117,21 +117,22 @@ export async function changeLanguage(language) {
  * @returns {void}
  */
 function updateLanguageSelector(currentLanguage) {
-  const selector = document.getElementById('languageSelector');
-  if (!selector) return;
+  const languageText = document.getElementById('languageText');
+  const currentLanguageFlag = document.getElementById('currentLanguageFlag');
+  
+  if (!languageText || !currentLanguageFlag) return;
 
-  const languages = {
-    fr: { flag: '🇫🇷', name: 'Français' },
-    en: { flag: '🇬🇧', name: 'English' },
-    de: { flag: '🇩🇪', name: 'Deutsch' },
-    es: { flag: '🇪🇸', name: 'Español' }
+  // Mapping des langues avec les codes flag-icons
+  const languageMap = {
+    'fr': { name: 'Français', flag: 'fi-fr' },
+    'de': { name: 'Deutsch', flag: 'fi-de' },
+    'es': { name: 'Español', flag: 'fi-es' },
+    'en': { name: 'English', flag: 'fi-gb' }
   };
 
-  const current = languages[currentLanguage];
-  if (current) {
-    // Mettre à jour le contenu du bouton
-    selector.innerHTML = `${current.flag} ${current.name}`;
-  }
+  const langInfo = languageMap[currentLanguage] || languageMap['fr'];
+  languageText.textContent = langInfo.name;
+  currentLanguageFlag.className = 'fi ' + langInfo.flag;
 }
 
 /**

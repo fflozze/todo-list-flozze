@@ -15,6 +15,8 @@
 
     <!-- Ressources externes -->
     <link rel="stylesheet" href="./css/style.css" />
+    <!-- Flag Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/lipis/flag-icons@7.3.2/css/flag-icons.min.css" />
     <!-- i18next pour l'internationalisation -->
     <script src="https://unpkg.com/i18next@23.7.6/dist/umd/i18next.min.js"></script>
     <script defer type="module" src="./js/index.js"></script>
@@ -26,13 +28,26 @@
     <!-- Sélecteur de langue -->
     <div class="language-selector-container">
       <button id="languageSelector" class="language-selector" aria-label="Changer la langue">
-        🇫🇷 Français
+        <span class="fi" id="currentLanguageFlag"></span>
+        <span class="language-text" id="languageText">Français</span>
       </button>
       <div class="language-dropdown" id="languageDropdown">
-        <button class="language-option" data-lang="fr">🇫🇷 Français</button>
-        <button class="language-option" data-lang="en">🇬🇧 English</button>
-        <button class="language-option" data-lang="de">🇩🇪 Deutsch</button>
-        <button class="language-option" data-lang="es">🇪🇸 Español</button>
+        <button class="language-option" data-lang="fr">
+          <span class="fi fi-fr"></span>
+          <span>Français</span>
+        </button>
+        <button class="language-option" data-lang="en">
+          <span class="fi fi-gb"></span>
+          <span>English</span>
+        </button>
+        <button class="language-option" data-lang="de">
+          <span class="fi fi-de"></span>
+          <span>Deutsch</span>
+        </button>
+        <button class="language-option" data-lang="es">
+          <span class="fi fi-es"></span>
+          <span>Español</span>
+        </button>
       </div>
     </div>
 

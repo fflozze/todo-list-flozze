@@ -23,100 +23,35 @@ window.addEventListener("DOMContentLoaded", async () => {
   // Gérer l'ouverture/fermeture du menu déroulant
   const languageSelector = document.getElementById('languageSelector');
   const languageDropdown = document.getElementById('languageDropdown');
-  const languageContainer = document.querySelector('.language-selector-container');
+  const languageOptions = languageDropdown.querySelectorAll('.language-option');
   
-  if (languageSelector && languageDropdown && languageContainer) {
-    let isMenuOpen = false;
-    let closeTimeout = null;
-    
-    // Fonction pour ouvrir le menu
-    const openMenu = () => {
-      if (closeTimeout) {
-        clearTimeout(closeTimeout);
-        closeTimeout = null;
-      }
-      languageDropdown.classList.add('open');
-      isMenuOpen = true;
-    };
-    
-    // Fonction pour fermer le menu avec un délai
-    const closeMenu = (delay = 150) => {
-      if (closeTimeout) {
-        clearTimeout(closeTimeout);
-      }
-      closeTimeout = setTimeout(() => {
-        if (isMenuOpen) {
-          languageDropdown.classList.remove('open');
-          isMenuOpen = false;
-        }
-      }, delay);
-    };
-    
-    // Ouvrir/fermer au clic sur le bouton
+  if (languageSelector && languageDropdown) {
+    // Gérer l'ouverture/fermeture du menu de langue
     languageSelector.addEventListener('click', (e) => {
       e.stopPropagation();
-      if (isMenuOpen) {
-        closeMenu(0);
-      } else {
-        openMenu();
-      }
+      languageDropdown.classList.toggle('open');
     });
     
-    // Garder le menu ouvert quand la souris est sur le conteneur
-    languageContainer.addEventListener('mouseenter', () => {
-      if (isMenuOpen) {
-        openMenu();
-      }
-    });
-    
-    // Fermer le menu quand on quitte le conteneur (avec délai pour permettre le passage)
-    languageContainer.addEventListener('mouseleave', (e) => {
-      // Vérifier si on va vers le menu déroulant
-      const relatedTarget = e.relatedTarget;
-      if (!languageContainer.contains(relatedTarget)) {
-        closeMenu();
-      }
-    });
-    
-    // Garder le menu ouvert quand la souris entre dans le menu déroulant
-    languageDropdown.addEventListener('mouseenter', () => {
-      openMenu();
-    });
-    
-    // Garder le menu ouvert quand la souris quitte le menu (pour revenir au bouton)
-    languageDropdown.addEventListener('mouseleave', (e) => {
-      const relatedTarget = e.relatedTarget;
-      if (!languageContainer.contains(relatedTarget)) {
-        closeMenu();
-      }
-    });
-    
-    // Fermer le menu si on clique ailleurs
-    document.addEventListener('click', (e) => {
-      if (!languageContainer.contains(e.target)) {
-        closeMenu(0);
-      }
-    });
-    
-    // Gérer les clics sur les options de langue avec délégation d'événements
-    languageContainer.addEventListener('click', async (e) => {
-      const option = e.target.closest('.language-option');
-      if (option) {
+    // Gérer la sélection de langue
+    languageOptions.forEach(option => {
+      option.addEventListener('click', async (e) => {
         e.stopPropagation();
         const lang = option.getAttribute('data-lang');
         if (lang) {
-          // Fermer le menu avant de changer la langue
-          closeMenu(0);
-          isMenuOpen = false;
-          
           await changeLanguage(lang);
+          languageDropdown.classList.remove('open');
           
           // Re-rendre les tâches pour mettre à jour les alt text
           const tasks = loadTasks();
           document.getElementById('taskList').innerHTML = '';
           tasks.forEach(renderTask);
         }
-      }
+      });
+    });
+    
+    // Fermer le menu en cliquant ailleurs
+    document.addEventListener('click', () => {
+      languageDropdown.classList.remove('open');
     });
   }
   
