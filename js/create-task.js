@@ -63,26 +63,26 @@ export function renderTask(task) {
   // Application des styles visuels selon l'état de la tâche
   const checkboxSpan = new_task.querySelector(".todo-checkbox");
   if (task.completed) {
-    // Styles pour une tâche validée
-    new_task.style.boxShadow = "0px 0px 10px rgb(0, 255, 13)";
-    new_task.style.border = "2px solid rgb(0, 255, 13)";
-    checkboxSpan.style.backgroundColor = "rgb(135, 255, 133)";
-    checkboxSpan.style.boxShadow = "0px 0px 10px rgb(0, 255, 13)";
-    checkboxSpan.style.border = "2px solid rgb(0, 255, 13)";
-    checkboxSpan.style.textShadow = "0 0 5px rgb(0, 255, 13)";
+    // Styles pour une tâche validée - opacité modérée pour équilibrer
+    new_task.style.boxShadow = "0px 0px 10px rgba(0, 255, 13, 0.3)";
+    new_task.style.border = "2px solid rgba(0, 255, 13, 0.3)";
+    checkboxSpan.style.backgroundColor = "rgba(135, 255, 133, 0.3)";
+    checkboxSpan.style.boxShadow = "0px 0px 10px rgba(0, 255, 13, 0.3)";
+    checkboxSpan.style.border = "2px solid rgba(0, 255, 13, 0.3)";
+    checkboxSpan.style.textShadow = "0 0 5px rgba(0, 255, 13, 0.3)";
   } else {
-    // Styles pour une tâche non validée
-    new_task.style.boxShadow = "0px 0px 10px rgb(255, 0, 0)";
-    new_task.style.border = "2px solid rgb(255, 0, 0)";
-    checkboxSpan.style.backgroundColor = "rgb(240, 77, 77)";
-    checkboxSpan.style.boxShadow = "0px 0px 10px rgb(255, 0, 0)";
-    checkboxSpan.style.border = "2px solid rgb(255, 0, 0)";
+    // Styles pour une tâche non validée - opacité modérée pour équilibrer
+    new_task.style.boxShadow = "0px 0px 10px rgba(255, 0, 0, 0.3)";
+    new_task.style.border = "2px solid rgba(255, 0, 0, 0.3)";
+    checkboxSpan.style.backgroundColor = "rgba(240, 77, 77, 0.3)";
+    checkboxSpan.style.boxShadow = "0px 0px 10px rgba(255, 0, 0, 0.3)";
+    checkboxSpan.style.border = "2px solid rgba(255, 0, 0, 0.3)";
     checkboxSpan.style.textShadow = "none";
   }
 
-  // Style du bouton de suppression
+  // Style du bouton de suppression - opacité modérée pour équilibrer
   const deleteButton = new_task.querySelector(".delete-button");
-  deleteButton.style.border = "2px solid rgb(111, 0, 0)";
+  deleteButton.style.border = "2px solid rgba(111, 0, 0, 0.3)";
 }
 
 /**

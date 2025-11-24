@@ -41,26 +41,26 @@ export function handleTaskValidation(e) {
 
     // Gestion de l'état visuel et logique de la tâche
     if (taskItem.classList.contains("validated")) {
-      // Dévalidation de la tâche
+      // Dévalidation de la tâche - opacité modérée pour équilibrer
       taskItem.classList.remove("validated");
-      taskItem.style.boxShadow = "0px 0px 10px rgb(255, 0, 0)";
-      taskItem.style.border = "2px solid rgb(255, 0, 0)";
-      checkboxSpan.style.backgroundColor = "rgb(240, 77, 77)";
-      checkboxSpan.style.boxShadow = "0px 0px 10px rgb(255, 0, 0)";
-      checkboxSpan.style.border = "2px solid rgb(255, 0, 0)";
+      taskItem.style.boxShadow = "0px 0px 10px rgba(255, 0, 0, 0.3)";
+      taskItem.style.border = "2px solid rgba(255, 0, 0, 0.3)";
+      checkboxSpan.style.backgroundColor = "rgba(240, 77, 77, 0.3)";
+      checkboxSpan.style.boxShadow = "0px 0px 10px rgba(255, 0, 0, 0.3)";
+      checkboxSpan.style.border = "2px solid rgba(255, 0, 0, 0.3)";
       checkboxSpan.style.textShadow = "none";
       checkboxSpan.textContent = " ";
       completed = false;
     } else {
-      // Validation de la tâche
+      // Validation de la tâche - opacité modérée pour équilibrer
       taskItem.classList.add("validated");
-      taskItem.style.boxShadow = "0px 0px 10px rgb(0, 255, 13)";
-      taskItem.style.border = "2px solid rgb(0, 255, 13)";
+      taskItem.style.boxShadow = "0px 0px 10px rgba(0, 255, 13, 0.3)";
+      taskItem.style.border = "2px solid rgba(0, 255, 13, 0.3)";
       checkboxSpan.textContent = "✓";
-      checkboxSpan.style.backgroundColor = "rgb(135, 255, 133)";
-      checkboxSpan.style.boxShadow = "0px 0px 10px rgb(0, 255, 13)";
-      checkboxSpan.style.border = "2px solid rgb(0, 255, 13)";
-      checkboxSpan.style.textShadow = "0 0 5px rgb(0, 255, 13)";
+      checkboxSpan.style.backgroundColor = "rgba(135, 255, 133, 0.3)";
+      checkboxSpan.style.boxShadow = "0px 0px 10px rgba(0, 255, 13, 0.3)";
+      checkboxSpan.style.border = "2px solid rgba(0, 255, 13, 0.3)";
+      checkboxSpan.style.textShadow = "0 0 5px rgba(0, 255, 13, 0.3)";
       completed = true;
     }
 
