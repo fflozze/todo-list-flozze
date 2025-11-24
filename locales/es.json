@@ -1,0 +1,9 @@
+{
+  "title": "Lista de tareas",
+  "addTaskPlaceholder": "Añadir una tarea",
+  "backButton": "Volver a app.flozze.fr",
+  "footerText": "💾 Tus tareas se almacenan localmente en tu navegador y son únicas para este dispositivo. No se recopilan ni transmiten datos.",
+  "validateTask": "Botón para validar la tarea: {{content}}",
+  "deleteTask": "Botón para eliminar la tarea: {{content}}"
+}
+

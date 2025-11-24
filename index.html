@@ -15,14 +15,29 @@
 
     <!-- Ressources externes -->
     <link rel="stylesheet" href="./css/style.css" />
+    <!-- i18next pour l'internationalisation -->
+    <script src="https://unpkg.com/i18next@23.7.6/dist/umd/i18next.min.js"></script>
     <script defer type="module" src="./js/index.js"></script>
   </head>
   <body>
     <!-- Particules animées en arrière-plan -->
     <div class="particles" id="particles"></div>
 
+    <!-- Sélecteur de langue -->
+    <div class="language-selector-container">
+      <button id="languageSelector" class="language-selector" aria-label="Changer la langue">
+        🇫🇷 Français
+      </button>
+      <div class="language-dropdown" id="languageDropdown">
+        <button class="language-option" data-lang="fr">🇫🇷 Français</button>
+        <button class="language-option" data-lang="en">🇬🇧 English</button>
+        <button class="language-option" data-lang="de">🇩🇪 Deutsch</button>
+        <button class="language-option" data-lang="es">🇪🇸 Español</button>
+      </div>
+    </div>
+
     <!-- Bouton de retour -->
-    <a href="https://app.flozze.fr" class="back-button" aria-label="Retour à app.flozze.fr">
+    <a href="https://app.flozze.fr" class="back-button" data-i18n-aria="backButton">
       <span class="back-arrow">←</span>
     </a>
 
@@ -34,7 +49,7 @@
       </div>
 
       <!-- En-tête de l'application -->
-      <h1>To do list</h1>
+      <h1 data-i18n="title">To do list</h1>
 
       <!-- Section d'ajout de tâches -->
       <form>
@@ -47,6 +62,7 @@
           <input
             id="taskInput"
             type="text"
+            data-i18n-placeholder="addTaskPlaceholder"
             placeholder="Ajouter une tâche"
             required
             alt="Champ de saisie pour ajouter une nouvelle tâche"
@@ -76,7 +92,7 @@
 
       <!-- Bas de page avec information sur le stockage -->
       <footer class="footer">
-        <p class="footer-text">
+        <p class="footer-text" data-i18n="footerText">
           💾 Vos tâches sont stockées localement dans votre navigateur et sont uniques à cet appareil. Aucune donnée n'est collectée ni transmise.
         </p>
       </footer>

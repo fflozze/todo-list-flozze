@@ -1,0 +1,124 @@
+/**
+ * @fileoverview Styles pour le sélecteur de langue
+ * @author flozze
+ * @version 1.0.0
+ * @description Styles pour le sélecteur de langue avec drapeaux en haut à droite
+ */
+
+/* Conteneur du sélecteur de langue */
+.language-selector-container {
+  position: fixed !important;
+  top: 20px !important;
+  right: 20px !important;
+  left: auto !important;
+  z-index: 1001;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+/* Bouton principal du sélecteur */
+.language-selector {
+  background: var(--glass-bg);
+  backdrop-filter: blur(10px);
+  border: 2px solid var(--glass-border);
+  border-radius: 12px;
+  padding: 10px 15px;
+  color: white;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+  font-family: var(--font-police);
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  min-width: 150px;
+  justify-content: center;
+}
+
+.language-selector:hover {
+  transform: translateY(-2px) scale(1.05);
+  background: var(--glass-hover);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+.language-selector:active {
+  transform: translateY(0) scale(0.98);
+}
+
+/* Menu déroulant des langues */
+.language-dropdown {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  margin-top: 2px;
+  background: var(--glass-bg);
+  backdrop-filter: blur(10px);
+  border: 2px solid var(--glass-border);
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  display: none;
+  flex-direction: column;
+  overflow: hidden;
+  min-width: 150px;
+  opacity: 0;
+  transform: translateY(-10px);
+  transition: all 0.3s ease;
+  pointer-events: none;
+  z-index: 1002;
+}
+
+/* Zone de transition invisible pour faciliter le passage de la souris */
+.language-selector-container::after {
+  content: '';
+  position: absolute;
+  top: 100%;
+  right: 0;
+  width: 100%;
+  height: 4px;
+  background: transparent;
+  z-index: 1003;
+  pointer-events: none;
+}
+
+/* Classe pour menu ouvert (gérée par JavaScript) */
+.language-dropdown.open {
+  display: flex;
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+/* Options de langue */
+.language-option {
+  background: transparent;
+  border: none;
+  padding: 12px 15px;
+  color: white;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  text-align: left;
+  transition: all 0.2s ease;
+  font-family: var(--font-police);
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  width: 100%;
+}
+
+.language-option:hover {
+  background: var(--glass-hover);
+  transform: translateX(5px);
+}
+
+.language-option:active {
+  transform: translateX(5px) scale(0.98);
+}
+
+/* Le bouton de retour reste en haut à gauche */
+

@@ -46,15 +46,19 @@ export function renderTask(task) {
   // Application de la classe de validation si nécessaire
   if (task.completed) new_task.classList.add("validated");
 
+  // Récupérer les traductions pour les alt text
+  const validateAlt = window.i18next ? window.i18next.t('validateTask', { content: task.content }) : `Bouton pour valider la tâche : ${task.content}`;
+  const deleteAlt = window.i18next ? window.i18next.t('deleteTask', { content: task.content }) : `Bouton pour supprimer la tâche : ${task.content}`;
+  
   // Construction du HTML de la tâche
   new_task.innerHTML = `
     <input id="task-validate-${task.id}" type="checkbox" ${
     task.completed ? "checked" : ""
   }/>
-    <span class="todo-checkbox" data-task-id="${task.id}" alt="Bouton pour valider la tâche : ${task.content}">${
+    <span class="todo-checkbox" data-task-id="${task.id}" alt="${validateAlt}">${
     task.completed ? "✓" : " "
   }</span>
-    <button class="delete-button" data-task-id="${task.id}" alt="Bouton pour supprimer la tâche : ${task.content}">&#128465;</button>
+    <button class="delete-button" data-task-id="${task.id}" alt="${deleteAlt}">&#128465;</button>
     <label for="task-validate-${task.id}">${task.content}</label>`;
 
   // Ajout de la tâche au DOM

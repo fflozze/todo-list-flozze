@@ -1,0 +1,9 @@
+{
+  "title": "To do list",
+  "addTaskPlaceholder": "Add a task",
+  "backButton": "Back to app.flozze.fr",
+  "footerText": "💾 Your tasks are stored locally in your browser and are unique to this device. No data is collected or transmitted.",
+  "validateTask": "Button to validate task: {{content}}",
+  "deleteTask": "Button to delete task: {{content}}"
+}
+

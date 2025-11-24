@@ -11,6 +11,7 @@
 @import "./root/font.css";
 @import "./task/add-task.css";
 @import "./task/task.css";
+@import "./language-selector.css";
 @import "./media-query/media-handler.css";
 
 /* Réinitialisation des styles par défaut */

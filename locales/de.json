@@ -1,0 +1,9 @@
+{
+  "title": "Aufgabenliste",
+  "addTaskPlaceholder": "Aufgabe hinzufügen",
+  "backButton": "Zurück zu app.flozze.fr",
+  "footerText": "💾 Ihre Aufgaben werden lokal in Ihrem Browser gespeichert und sind für dieses Gerät eindeutig. Es werden keine Daten gesammelt oder übertragen.",
+  "validateTask": "Schaltfläche zum Validieren der Aufgabe: {{content}}",
+  "deleteTask": "Schaltfläche zum Löschen der Aufgabe: {{content}}"
+}
+
