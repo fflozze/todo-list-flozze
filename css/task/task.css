@@ -41,24 +41,24 @@ li:hover {
 /* Tâche non validée */
 li:not(.validated) {
   background: var(--bg-box-unValidate-color);
-  border-color: rgba(200, 200, 200, 0.25);
-  box-shadow: 0 10px 30px rgba(200, 200, 200, 0.1);
+  border-color: var(--glass-border);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
 }
 
 li:not(.validated):hover {
-  box-shadow: 0 15px 40px rgba(200, 200, 200, 0.15);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
 }
 
 /* Tâche validée */
 li.validated {
   background: var(--bg-box-validate-color);
-  border-color: rgba(190, 190, 190, 0.25);
-  box-shadow: 0 10px 30px rgba(190, 190, 190, 0.1);
+  border-color: var(--glass-border);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
   opacity: 0.8;
 }
 
 li.validated:hover {
-  box-shadow: 0 15px 40px rgba(190, 190, 190, 0.15);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
   opacity: 1;
 }
 
@@ -121,10 +121,10 @@ input[type="checkbox"] {
   border-radius: 50%;
   align-items: center;
   justify-content: center;
-  background: var(--bg-box-unValidate-color);
+  background: var(--glass-bg);
   backdrop-filter: blur(10px);
-  border: 2px solid rgba(200, 200, 200, 0.25);
-  box-shadow: 0 5px 15px rgba(200, 200, 200, 0.1);
+  border: 2px solid var(--glass-border);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
   cursor: pointer;
   font-family: var(--font-police);
   color: var(--color-text);
@@ -134,19 +134,21 @@ input[type="checkbox"] {
 
 /* Checkbox validée */
 li.validated .todo-checkbox {
-  background: var(--bg-box-validate-color);
-  border-color: rgba(190, 190, 190, 0.25);
-  box-shadow: 0 5px 15px rgba(190, 190, 190, 0.1);
+  background: var(--glass-bg);
+  border-color: var(--glass-border);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
 }
 
 /* Animation au survol de la checkbox */
 .todo-checkbox:hover {
   transform: scale(1.1) rotate(5deg);
-  box-shadow: 0 8px 20px rgba(200, 200, 200, 0.15);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+  background: var(--glass-hover);
 }
 
 li.validated .todo-checkbox:hover {
-  box-shadow: 0 8px 20px rgba(190, 190, 190, 0.15);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+  background: var(--glass-hover);
 }
 
 /* Style du bouton de suppression */
@@ -158,10 +160,10 @@ li.validated .todo-checkbox:hover {
   width: 50px;
   height: 50px;
   border-radius: 50%;
-  background: var(--bg-box-supr-color);
+  background: var(--glass-bg);
   backdrop-filter: blur(10px);
-  border: 2px solid rgba(180, 180, 180, 0.25);
-  box-shadow: 0 5px 15px rgba(180, 180, 180, 0.1);
+  border: 2px solid var(--glass-border);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
   color: var(--color-text);
   font-size: 1.8rem;
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
@@ -172,8 +174,8 @@ li.validated .todo-checkbox:hover {
 /* Animation au survol du bouton de suppression */
 .delete-button:hover {
   transform: scale(1.15) rotate(15deg);
-  box-shadow: 0 8px 20px rgba(180, 180, 180, 0.15);
-  background: rgba(180, 180, 180, 0.2);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+  background: var(--glass-hover);
 }
 
 .delete-button:active {
