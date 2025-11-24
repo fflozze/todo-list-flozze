@@ -21,18 +21,18 @@
   --glass-hover: rgba(255, 255, 255, 0.3);
   
   /* Couleurs des boîtes pour différents états */
-  --bg-box-supr-color: rgba(200, 150, 150, 0.25);      /* Couleur de fond pour les éléments de suppression - moins flashy */
-  --bg-box-unValidate-color: rgba(220, 200, 170, 0.25); /* Couleur de fond pour les tâches non validées - moins flashy */
-  --bg-box-validate-color: rgba(150, 180, 160, 0.25);  /* Couleur de fond pour les tâches validées - moins flashy */
+  --bg-box-supr-color: rgba(180, 180, 180, 0.15);      /* Couleur de fond pour les éléments de suppression - très subtile */
+  --bg-box-unValidate-color: rgba(200, 200, 200, 0.15); /* Couleur de fond pour les tâches non validées - très subtile */
+  --bg-box-validate-color: rgba(190, 190, 190, 0.15);  /* Couleur de fond pour les tâches validées - très subtile */
   
   /* Couleur du texte principal */
   --color-text: rgba(255, 255, 255, 0.95);
   
   /* Couleurs des ombres pour différents états */
   --shadow-color: rgba(255, 255, 255, 0.5);        /* Ombre par défaut */
-  --shadow-supr-color: rgba(200, 150, 150, 0.4);     /* Ombre pour les éléments de suppression - moins flashy */
-  --shadow-unValidate-color: rgba(220, 200, 170, 0.4); /* Ombre pour les tâches non validées - moins flashy */
-  --shadow-validate-color: rgba(150, 180, 160, 0.4);  /* Ombre pour les tâches validées - moins flashy */
+  --shadow-supr-color: rgba(180, 180, 180, 0.2);     /* Ombre pour les éléments de suppression - très subtile */
+  --shadow-unValidate-color: rgba(200, 200, 200, 0.2); /* Ombre pour les tâches non validées - très subtile */
+  --shadow-validate-color: rgba(190, 190, 190, 0.2);  /* Ombre pour les tâches validées - très subtile */
   
   /* Couleurs des particules */
   --particle-color: rgba(255, 255, 255, 0.3);
