@@ -20,10 +20,10 @@
   align-items: center;
   gap: 8px;
   padding: 10px 15px;
-  background: rgba(102, 126, 234, 0.3);
+  background: var(--glass-bg);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  border: 2px solid var(--glass-border);
   border-radius: 12px;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
   color: var(--color-text);
@@ -42,9 +42,9 @@
 
 .language-selector:hover {
   transform: scale(1.05);
-  background: rgba(102, 126, 234, 0.4);
+  background: var(--glass-hover);
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
-  border-color: rgba(255, 255, 255, 0.3);
+  border-color: rgba(255, 255, 255, 0.4);
 }
 
 .language-selector:active {
@@ -56,10 +56,10 @@
   position: absolute;
   top: calc(100% + 10px);
   right: 0;
-  background: rgba(102, 126, 234, 0.3);
+  background: var(--glass-bg);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  border: 2px solid var(--glass-border);
   border-radius: 12px;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
   min-width: 200px;
@@ -106,13 +106,13 @@
 
 /* Options de langue */
 .language-option {
-  background: rgba(102, 126, 234, 0.3);
+  background: var(--glass-bg);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  border: 2px solid var(--glass-border);
   border-radius: 8px;
   padding: 12px 15px;
-  color: white;
+  color: var(--color-text);
   font-size: 0.9rem;
   font-weight: 600;
   cursor: pointer;
@@ -133,8 +133,8 @@
 }
 
 .language-option:hover {
-  background: rgba(102, 126, 234, 0.4);
-  border-color: rgba(255, 255, 255, 0.3);
+  background: var(--glass-hover);
+  border-color: rgba(255, 255, 255, 0.4);
   transform: translateX(5px);
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
 }
